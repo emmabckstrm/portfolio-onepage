@@ -1,0 +1,136 @@
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open sans', Calibri, Arial, sans-serif;
+    background: #eee url({image:image background}) repeat;
+    color: #000;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+a, a:visited {
+	text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; }
+
+a:hover {
+    -webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; }
+
+/*
+*   HEADER =======================================
+*/
+.buttons-container,
+.iframe-controls-container {
+    display: none !important;
+    display: none;
+}
+body > iframe { display: none !important; }
+
+h1, h2 {
+    font-family: 'Lato', 'Open Sans', arial, sans-serif;
+}
+h1 {
+    font-size: 4em;
+    font-weight: 100;
+}
+.container {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.container::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+/* The element to be centered, can also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 380px;
+  width: 92%;
+}
+.container img.portrait {
+    border-radius: 100%;
+}
+.container h1 {
+    margin: 0;
+}
+a.ico {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+a.ico, a.ico:link, a.ico:visited {
+    color: black;
+}
+a.ico:hover {
+    color: seagreen;
+}
+/* -----------------------------------------------*/
+
+/*
+*		PORTFOLIO =============================
+*/
+.portfolio-container {
+	width: 90%;
+	max-width: 800px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.portfolio-item {
+	width: 100%;
+	display: flex;
+	padding: 50px 0;
+}
+.portfolio-item img {
+	width: 100%;
+	display: block;
+}
+.portfolio-col {
+	width: 50%;
+	position: relative;
+}
+.portfolio-item .col-img {
+}
+.portfolio-item .col-info {
+	align-self: center;
+}
+.portfolio-item:nth-child(even) .col-img {
+	left: 50%;
+}
+.portfolio-item:nth-child(even) .col-info {
+	right: 50%;
+}
+
+@media (max-width: 600px) {
+	.portfolio-item:nth-child(even) .col-img {
+		left: 0%;
+	}
+	.portfolio-item:nth-child(even) .col-info {
+		right: 0%;
+	}
+	.portfolio-item {
+		flex-wrap: wrap;
+	}
+	.portfolio-col {
+		width: 100%;
+	}
+}

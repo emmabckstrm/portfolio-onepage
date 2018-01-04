@@ -41,7 +41,7 @@
 </head>
 
 
-<body ng-controller="portfolioController">
+<body ng-class="openPopup ? 'no-scroll' : 'scroll'" ng-controller="portfolioController">
 
     <div class="container">
         <div class="centered">
@@ -58,7 +58,7 @@
     </div>
     <h2 class="text-center">Some of my work</h2>
     <ul class="list-unstyled portfolio-container">
-      <li ng-repeat="item in portfolio" class="portfolio-item">
+      <li ng-repeat="item in ps.portfolio" ng-click="updatePreview(item.id)" class="portfolio-item">
         <div class="portfolio-col col-img">
           <img ng-src="{{item.img}}"/>
         </div>
@@ -69,13 +69,19 @@
       </li>
     </ul> <!-- end portfolio container -->
 
-
     <section class="container contact">
       <div class="centered">
         <h2>Let's talk!</h2>
         <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
       </div>
     </section>
+
+    <div ng-class="openPopup ? 'popup-open' : 'popup-close'" class="portfolio-popup">
+      <h2>{{ps.current.title}}</h2>
+      <p>{{ps.current.shortDescription}}</p>
+
+      <p ng-click="closePopup()">CLOSE</p>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="scripts.js"></script>
 </body>

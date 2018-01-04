@@ -76,11 +76,19 @@
       </div>
     </section>
 
-    <div ng-class="openPopup ? 'popup-open' : 'popup-close'" class="portfolio-popup">
-      <h2>{{ps.current.title}}</h2>
-      <p>{{ps.current.shortDescription}}</p>
+    <div ng-class="openPopup ? 'popup-open' : 'popup-close'" class="container portfolio-popup">
+      <div class="centered popup-container">
+        <div class="img">
+          <img ng-src="{{ps.current.img}}"/>
+        </div>
+        <div class="text">
+          <h2>{{ps.current.title}}</h2>
+          <p>{{ps.current.description}}</p>
+          <p ng-click="closePopup()">CLOSE</p>
+        </div>
 
-      <p ng-click="closePopup()">CLOSE</p>
+
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="scripts.js"></script>

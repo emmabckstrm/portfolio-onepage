@@ -113,7 +113,7 @@ a.ico:hover {
 	display: flex;
 	padding: 50px 0;
 }
-.portfolio-item img {
+.portfolio-item img, .portfolio-popup img, .img {
 	width: 100%;
 	display: block;
 }
@@ -145,19 +145,68 @@ a.ico:hover {
 *		portfolio popu8p
 */
 .portfolio-popup {
-	padding: 5em;
-}
-.popup-open {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: gray;
 	z-index: 5;
+	background: rgba(0,0,0,0.85);
+	background: #eee;
+	overflow-y: auto;
+	visibility: hidden;
+}
+.popup-open {
+	opacity: 1;
+	visibility: visible;
 }
 .popup-close {
-	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.popup-container {
+	position: relative;
+	width: 90%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #eee;
+	text-align: left;
+}
+.popup-container .text,
+.popup-container .img {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 0em;
+}
+.popup-open .popup-container .text {
+	top: 0px;
+}
+.popup-open .popup-container .img {
+	top: 0px;
+}
+.popup-close .popup-container .text {
+	top: 20px;
+}
+.popup-close .popup-container .img {
+	top: -20px;
+}
+
+.popup-open,
+.popup-close {
+	-webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.popup-container .text,
+.popup-container .img {
+	-webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 /*

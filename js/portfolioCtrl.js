@@ -4,7 +4,7 @@ portfolioApp.controller('portfolioController', ['$scope', 'portfolioService', fu
   $scope.currentTitle = 'yo';
   $scope.ps = portfolioService;
   $scope.number = $scope.ps.number;
-  $scope.openPopup = false;
+  $scope.openPopup = true;
 
   $scope.testFunc = function(t) {
     $scope.ps.currentTitle = t;

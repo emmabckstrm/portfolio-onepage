@@ -55,19 +55,27 @@
             </p>
 
         </div>
-
-        <ul class="list-unstyled portfolio-container">
-          <li ng-repeat="item in portfolio" class="portfolio-item">
-            <div class="portfolio-col col-img">
-              <img ng-src="{{item.img}}"/>
-            </div>
-            <div class="portfolio-col col-info">
-              <h3>{{item.title}}</h3>
-              <p>{{item.shortDescription}}</p>
-            </div>
-          </li>
-        </ul> <!-- end portfolio container -->
     </div>
+    <h2 class="text-center">Some of my work</h2>
+    <ul class="list-unstyled portfolio-container">
+      <li ng-repeat="item in portfolio" class="portfolio-item">
+        <div class="portfolio-col col-img">
+          <img ng-src="{{item.img}}"/>
+        </div>
+        <div class="portfolio-col col-info">
+          <h3>{{item.title}}</h3>
+          <p>{{item.shortDescription}}</p>
+        </div>
+      </li>
+    </ul> <!-- end portfolio container -->
+
+
+    <section class="container contact">
+      <div class="centered">
+        <h2>Let's talk!</h2>
+        <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
+      </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="scripts.js"></script>
 </body>

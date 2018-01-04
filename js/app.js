@@ -4,6 +4,20 @@ var portfolioApp = angular.module('portfolioApp', []);
 // Define the `PhoneListController` controller on the `phonecatApp` module
 portfolioApp.controller('portfolioController', function PortfolioController($scope) {
   $scope.portfolio = [
+    {
+  		"course": "",
+  		"description": "Lorem ipsum petentium efficiantur te eum",
+  		"shortDescription": "The Dandelion was created as part of a research project at KTH. It is a visualization of a full year and can be mapped to different datasets.",
+  		"id": 7,
+  		"img": "img/dandelion1.png",
+  		"project": "",
+  		"role": "Web developer",
+  		"tags": "test1",
+  		"team": "Gustav Höglund, Tomás Albrecht, Victor Gustafsson",
+  		"title": "The Dandelion",
+  		"tools": "HTML, CSS, JavaScript, Git, D3js",
+  		"url": "https://emmabckstrm.github.io/spoc"
+  	},
   	{
   		"course": "",
   		"description": "Lorem ipsum petentium efficiantur te eum",
@@ -19,23 +33,9 @@ portfolioApp.controller('portfolioController', function PortfolioController($sco
   		"url": "https://github.com/armada-ths/ais"
   	},
   	{
-  		"course": "",
-  		"description": "Lorem ipsum petentium efficiantur te eum",
-  		"shortDescription": "Lorem ipsum petentium efficiantur te eum",
-  		"id": 7,
-  		"img": "img/spoc.png",
-  		"project": "",
-  		"role": "Web developer",
-  		"tags": "test1",
-  		"team": "Gustav Höglund, Tomás Albrecht, Victor Gustafsson",
-  		"title": "SPOC",
-  		"tools": "HTML, CSS, JavaScript, Git, D3js",
-  		"url": "https://emmabckstrm.github.io/spoc"
-  	},
-  	{
   		"course": "DH2321 Information Visualization",
-  		"description": "Lorem ipsum petentium efficiantur te eum. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity<br/> to explore laureates down to an individual level.",
-  		"shortDescription": "Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.",
+  		"description": "Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level. Le Bon Nobel is a project for the course DH2321 Information Visualization at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity<br/> to explore laureates down to an individual level.",
+  		"shortDescription": "Le Bon Nobel is a visualization project for a course at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.",
   		"id": 6,
   		"img": "img/lebonnobel1.png",
   		"project": "",
@@ -63,18 +63,18 @@ portfolioApp.controller('portfolioController', function PortfolioController($sco
   	{
   		"course": "DT2140 Multimodal Interaction and Interfaces",
   		"description": "Lorem ipsum petentium efficiantur te eum",
-  		"shortDescription": "Lorem ipsum petentium efficiantur te eum",
+  		"shortDescription": "GhostHuntAR was a project for a course at KTH, consisting of an AR game app.",
   		"id": 4,
   		"img": "img/ghosthuntar.PNG",
   		"project": "",
-  		"role": "Developer",
+  		"role": "Developer & 3D modeller",
   		"tags": "test1",
   		"team": "Maria Westling, Robin Kammerlander, Tedy Warsitha",
   		"title": "GhostHuntAR",
-  		"tools": "",
+  		"tools": "Unity, C#, Blender, Vuforia",
   		"url": ""
   	},
-  	{
+  	/*{
   		"course": "",
   		"description": "Lorem ipsum petentium efficiantur te eum",
   		"shortDescription": "Lorem ipsum petentium efficiantur te eum",
@@ -87,21 +87,21 @@ portfolioApp.controller('portfolioController', function PortfolioController($sco
   		"title": "EggHunt",
   		"tools": "",
   		"url": ""
-  	},
+  	},*/
   	{
   		"course": "",
-  		"description": "Lorem ipsum petentium efficiantur te eum",
-  		"shortDescription": "Lorem ipsum petentium efficiantur te eum",
+  		"description": "During the reception of new students to Chapter of Media technology at KTH, a new website was designed and developed.",
+  		"shortDescription": "During the reception of new students to Chapter of Media technology at KTH, a new website was designed and developed.",
   		"id": 2,
   		"img": "img/mtgn1.png",
   		"project": "Reception for new students",
-  		"role": "UX designer & Fronted developer",
+  		"role": "UX designer & Frontend developer",
   		"tags": "test1",
   		"team": "Arvid Sätterkvist, Marcus Frisell, Viktor Ceder",
-  		"title": "Mtgn2015",
+  		"title": "MTGN2015",
   		"tools": "HTML, CSS, PHP, JavaScript, Git",
   		"url": ""
-  	},
+  	}/*,
   	{
   		"course": "",
   		"description": "Lorem ipsum petentium efficiantur te eum",
@@ -115,7 +115,7 @@ portfolioApp.controller('portfolioController', function PortfolioController($sco
   		"title": "Riverbell themes",
   		"tools": "",
   		"url": ""
-  	}
+  	}*/
   ];
 
 });

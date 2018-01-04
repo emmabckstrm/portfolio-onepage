@@ -29,6 +29,10 @@ a:hover {
 	-o-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out; }
 
+.text-center {
+	text-align: center;
+}
+
 /*
 *   HEADER =======================================
 */
@@ -66,6 +70,7 @@ h1 {
   vertical-align: middle;
   max-width: 380px;
   width: 92%;
+	position: relative;
 }
 .container img.portrait {
     border-radius: 100%;
@@ -94,6 +99,8 @@ a.ico:hover {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
 }
 .portfolio-item {
 	width: 100%;
@@ -112,13 +119,58 @@ a.ico:hover {
 }
 .portfolio-item .col-info {
 	align-self: center;
+	text-align: justify;
 }
 .portfolio-item:nth-child(even) .col-img {
 	left: 50%;
 }
 .portfolio-item:nth-child(even) .col-info {
 	right: 50%;
+	padding-right: 50px;
 }
+.portfolio-item:nth-child(odd) .col-info {
+	padding-left: 50px;
+}
+
+.portfolio-item h3 {
+
+}
+/*
+*		CONTACT =============================
+*/
+.contact {
+	position: relative;
+	background: PaleTurquoise;
+	height: 80%;
+	background:
+	/*linear-gradient(
+      rgba(75, 197, 180, 0.85),
+      rgba(75, 197, 180, 0.85)
+    ),*/
+		url('https://static.tumblr.com/ta26uqw/l8wp1j4kv/pineapple3.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 2;
+}
+.contact::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: lightseagreen;
+	opacity: 0;
+	z-index: 1;
+}
+.contact .centered {
+	z-index: 3;
+}
+
+/*
+*		MEDIA QUERIES =============================
+*/
+
 
 @media (max-width: 600px) {
 	.portfolio-item:nth-child(even) .col-img {
@@ -126,6 +178,10 @@ a.ico:hover {
 	}
 	.portfolio-item:nth-child(even) .col-info {
 		right: 0%;
+		padding-right: 0;
+	}
+	.portfolio-item:nth-child(odd) .col-info {
+		padding-left: 0;
 	}
 	.portfolio-item {
 		flex-wrap: wrap;

@@ -20,20 +20,12 @@
     <meta name="image:image pattern" content="" />
     <meta name="color:background" content="#fce19d" />
 
-<!--    ljusgul: fce19d
-        lemon yellow:  FFFF66
-        ljusgrön cae6c7
-        ljusgul 2: FCF29D
-        blå 6989A2
-        limegrön DBF096 DBF096
-        ljusröd FC9F9D
--->
 <script src="http://static.tumblr.com/ta26uqw/qF5n4xvl5/modernizr.custom.js"></script>
 
 <!-- fonts -->
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Permanent+Marker:400' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Oswald:200,300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 
 <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -64,6 +56,9 @@
         </div>
         <div class="portfolio-col col-info">
           <h3>{{item.title}}</h3>
+          <p class="portfolio-tags">
+            <span ng-repeat="tag in item.tags" class="tag"><span>{{tag}}</span> <span ng-show="!$last">/</span> </span>
+          </p>
           <p>{{item.shortDescription}}</p>
         </div>
       </li>
@@ -76,21 +71,48 @@
       </div>
     </section>
 
-    <div ng-class="openPopup ? 'popup-open' : 'popup-close'" class="container portfolio-popup">
+    <!--
+      ******************************* POPUP
+    -->
+    <div ng-repeat="(key, item) in ps.portfolio" ng-class="key == currentId ? 'popup-open' : 'popup-close'" class="container portfolio-popup">
+      <nav class="nav-popup">
+        <h2 ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> {{ps.current.title}}</h2>
+      </nav>
       <div class="centered popup-container">
+
+        <div higgidy-carousel='item.imgAll' timeout="10000" length="item.imgAll.length" class="higgidy-carousel">
+          <ul higgidy-carousel-images class="higgidy-carousel-images">
+            <li ng-repeat="image in item.imgAll">
+                <img ng-src="{{image.src}}" alt="{{img.alt}}" />
+            </li>
+          </ul>
+
+          <nav class="links">
+            <ul>
+              <li ng-repeat="image in item.imgAll">
+                <a href="" ng-click="show($index)" ng-class="{selected: carousel.current == $index}">
+                  {{$index}}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
         <div class="img">
-          <img ng-src="{{ps.current.img}}"/>
+          <img ng-src="{{item.img}}"/>
         </div>
         <div class="text">
-          <h2>{{ps.current.title}}</h2>
-          <p>{{ps.current.description}}</p>
-          <p ng-click="closePopup()">CLOSE</p>
+          <!--<h2>{{ps.current.title}}</h2>-->
+          <p ng-bind-html="item.description"></p>
+          <p class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
+          <span ng-click="closePopup(key)">CLOSE</span>
         </div>
 
 
-      </div>
+      </div> <!-- end popup-container -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular-sanitize.js"></script>
     <script src="scripts.js"></script>
 </body>
 

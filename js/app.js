@@ -1,2 +1,2 @@
 // Define the `phonecatApp` module
-var portfolioApp = angular.module('portfolioApp', []);
+var portfolioApp = angular.module('portfolioApp', ['ngSanitize', 'HiggidyCarousel']);

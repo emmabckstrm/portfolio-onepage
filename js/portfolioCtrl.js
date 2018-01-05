@@ -1,10 +1,12 @@
 // Define the `PhoneListController` controller on the `phonecatApp` module
 portfolioApp.controller('portfolioController', ['$scope', 'portfolioService', function PortfolioController($scope, portfolioService) {
 
-  $scope.currentTitle = 'yo';
+  $scope.currentId = '';
   $scope.ps = portfolioService;
   $scope.number = $scope.ps.number;
-  $scope.openPopup = true;
+  $scope.openPopup = false;
+
+
 
   $scope.testFunc = function(t) {
     $scope.ps.currentTitle = t;
@@ -12,14 +14,16 @@ portfolioApp.controller('portfolioController', ['$scope', 'portfolioService', fu
   }
 
   $scope.updatePreview = function(id) {
-    var s = "id_";
-    s += String(id);
-    console.log(s);
+    $scope.currentId = "id_";
+    $scope.currentId  += String(id);
+    console.log("hello2", $scope.currentId);
     $scope.openPopup = true;
-    $scope.ps.updatePreview(s);
+    $scope.ps.updatePreview($scope.currentId);
   }
 
-  $scope.closePopup = function() {
+  $scope.closePopup = function(id) {
+    $scope.ps.portfolio[id].open = false;
+    $scope.currentId = '';
     $scope.openPopup = false;
   }
 

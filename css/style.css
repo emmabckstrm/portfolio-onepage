@@ -254,54 +254,6 @@ a.ico:hover {
 *		CAROUSEL =============================
 */
 
-.higgidy-carousel {
-  width: 100%;
-  overflow:hidden;
-}
-
-
-.higgidy-carousel .higgidy-carousel-images {
-	transition:1s;
-	margin:0;
-	padding:0;
-}
-.higgidy-carousel .higgidy-carousel-images li {
-	list-style:none;
-	margin:0;
-	padding:0;
-	display:inline-block;
-	white-space:nowrap;
-}
-.higgidy-carousel .higgidy-carousel-images img {
-	width: 100%;
-}
-.higgidy-carousel .links {
-	text-align:center;
-}
-.higgidy-carousel .links ul, li {
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-.higgidy-carousel .links li {
-	display:inline-block;
-}
-.higgidy-carousel .links a {
-	transition:0.5s;
-	display:inline-block;
-	color:black;
-	text-decoration:none;
-	margin:5px;
-	border-radius:100px;
-	border:2px solid black;
-	width:10px;
-	height:10px;
-	color:transparent;
-}
-.higgidy-carousel .links a:hover, a.selected {
-	background:black;
-}
-
 /*
 *		CONTACT =============================
 */

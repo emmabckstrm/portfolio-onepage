@@ -80,14 +80,14 @@
       </nav>
       <div class="centered popup-container">
 
-        <div higgidy-carousel='item.imgAll' timeout="10000" length="item.imgAll.length" class="higgidy-carousel">
+        <div higgidy-carousel='item.imgAll' timeout="10000" length="{{item.imgAll.length}}" class="higgidy-carousel">
           <ul higgidy-carousel-images class="higgidy-carousel-images">
             <li ng-repeat="image in item.imgAll">
                 <img ng-src="{{image.src}}" alt="{{img.alt}}" />
             </li>
           </ul>
 
-          <nav class="links">
+          <nav ng-show="item.imgAll.length > 1" class="links">
             <ul>
               <li ng-repeat="image in item.imgAll">
                 <a href="" ng-click="show($index)" ng-class="{selected: carousel.current == $index}">
@@ -98,13 +98,13 @@
           </nav>
         </div>
 
-        <div class="img">
+        <!--<div class="img">
           <img ng-src="{{item.img}}"/>
-        </div>
+        </div>-->
         <div class="text">
           <!--<h2>{{ps.current.title}}</h2>-->
           <p ng-bind-html="item.description"></p>
-          <p class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
+          <p ng-if="{{ps.current.url}}" class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
           <span ng-click="closePopup(key)">CLOSE</span>
         </div>
 

@@ -3,6 +3,7 @@
 angular.module('HiggidyCarousel',  [])
 
   .controller('HiggidyCarousel.controller', function($scope, $interval) {
+    $scope.max = 0;
     var timeout;
     $scope.carousel = {
       current: 0,
@@ -12,7 +13,8 @@ angular.module('HiggidyCarousel',  [])
       if ($scope.images){
         $scope.carousel.max = $scope.images.length;
       } else {
-        $scope.carousel.max = 3;
+        console.log("heyoo",$scope.max)
+        $scope.carousel.max = $scope.max;
       }
     };
     $scope.show = function(i) {
@@ -47,6 +49,8 @@ angular.module('HiggidyCarousel',  [])
             scope.carousel.width = element[0].offsetWidth;
           };
           scope.carousel.timeout = attrs.timeout || 1000;
+          scope.max = attrs.length;
+          scope.carousel.max = attrs.length;
         }
       }
     };

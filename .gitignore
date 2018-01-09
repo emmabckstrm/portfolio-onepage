@@ -1,9 +1,7 @@
 
 # Created by https://www.gitignore.io/api/node
 
-# Custom
-build/*.html
-js/all.js
+
 
 ### Node ###
 # Logs
@@ -65,5 +63,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Custom
+build/*.html
+js/all.js
 
 # End of https://www.gitignore.io/api/node

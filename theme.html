@@ -79,15 +79,18 @@
         <h2 ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> {{ps.current.title}}</h2>
       </nav>
       <div class="centered popup-container">
-
-
         <div class="img">
           <img ng-src="{{item.img}}"/>
         </div>
+        <h3>{{item.title}}</h3>
+        <p class="portfolio-tags">
+          <span ng-repeat="tag in item.tags" class="tag"><span>{{tag}}</span> <span ng-show="!$last">/</span> </span>
+        </p>
+        
         <div class="text">
           <!--<h2>{{ps.current.title}}</h2>-->
           <p ng-bind-html="item.description"></p>
-          <p ng-if="{{ps.current.url}}" class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
+          <p ng-if="ps.current.url" class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
           <span ng-click="closePopup(key)">CLOSE</span>
         </div>
 

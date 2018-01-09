@@ -116,7 +116,8 @@ a.ico:hover {
 .portfolio-item {
 	width: 100%;
 	display: flex;
-	padding: 50px 0;
+	margin: 100px 0;
+	cursor: pointer;
 }
 .portfolio-item img, .portfolio-popup img, .img {
 	width: 100%;
@@ -143,7 +144,8 @@ a.ico:hover {
 	padding-left: 50px;
 }
 
-.portfolio-item h3 {
+.portfolio-item h3,
+.portfolio-popup h3 {
 	font-family: 'Oswald', 'Open Sans', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;

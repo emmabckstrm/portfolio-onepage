@@ -1,11 +1,40 @@
 // Define the `PhoneListController` controller on the `phonecatApp` module
-portfolioApp.controller('portfolioController', ['$scope', 'portfolioService', function PortfolioController($scope, portfolioService) {
+portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfolioService', function PortfolioController($scope, $interval, portfolioService) {
 
   $scope.currentId = '';
   $scope.ps = portfolioService;
   $scope.number = $scope.ps.number;
   $scope.openPopup = false;
 
+  /*  SLIDER TRANSITIONS ==========================
+  *
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide,2500);
+
+  function nextSlide(){
+  	slides[currentSlide].className = 'slide';
+  	currentSlide = (currentSlide+1)%slides.length;
+  	slides[currentSlide].className = 'slide showing';
+  }*/
+
+  $scope.collection = ["Web developer", "Plant lover"];
+
+  $scope.selectedIndex = 0; // Whatever the default selected index is, use -1 for no selection
+
+  $scope.itemClicked = function ($index) {
+    console.log($index);
+    $scope.selectedIndex = $index;
+  };
+
+  /*$interval(function() {
+    if ($scope.selectedIndex < $scope.collection.length-1) {
+      $scope.selectedIndex = $scope.selectedIndex + 1;
+    } else {
+      $scope.selectedIndex = 0;
+    }
+
+  }, 2500);*/
 
 
   $scope.testFunc = function(t) {

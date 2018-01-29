@@ -24,8 +24,8 @@
 
 <!-- fonts -->
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Oswald:200,300,400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald:200,300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
 
 <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -34,21 +34,26 @@
 
 
 <body ng-class="openPopup ? 'no-scroll' : 'scroll'" ng-controller="portfolioController">
-
-    <div class="container">
+  <header class="hero container">
         <div class="centered">
-            <img class="portrait" src="{PortraitURL-128}"/>
-            <h1>Hi, I'm Emma</h1>
-            <p>I'm Emma Bäckström, a media technology student at KTH, graduating in spring 2018. I like programming and I want to create cool stuff.</p>
-            <p>
+            <!--<img class="portrait" src="{PortraitURL-128}"/>-->
+            <h1 class="text-left">Hi,</br> I'm Emma. I am a</h1>
+            <div class="always-relative">
+              <h1 class="text-left giant slide" ng-repeat="item in collection"
+               ng-class="{ 'showing': $index == selectedIndex, 'always-relative': $index == 0 }"
+               ng-click="itemClicked($index)"> {{ item }} </h1>
+             </div>
+            <p>In spring 2018 I will graduate from KTH as Media Technology Engineer, with a focus in human-computer interaction. I want to create things that matter with awesome people.</p>
+            <!--<p>
                 <a class="ico" href="https://www.linkedin.com/in/emmabackstrom/"><i class="fa fa-linkedin fa-lg"></i></a>
                 <a class="ico" href="https://github.com/emmabckstrm/"><i class="fa fa-github-alt fa-lg"></i> </a>
                 <a class="ico" href="mailto:backstromemma@gmail.com"><i class="fa fa-envelope-o fa-lg"></i> </a>
-            </p>
+            </p>-->
 
         </div>
-    </div>
-    <h2 class="text-center">Some of my work</h2>
+  </header>
+  <section class="text-center portfolio">
+    <h1 class="text-center title">Some of my work</h1>
     <ul class="list-unstyled portfolio-container">
       <li ng-repeat="item in ps.portfolio" ng-click="updatePreview(item.id)" class="portfolio-item">
         <div class="portfolio-col col-img">
@@ -63,10 +68,10 @@
         </div>
       </li>
     </ul> <!-- end portfolio container -->
-
-    <section class="container contact">
+  </section>
+    <section class="container hero">
       <div class="centered">
-        <h2>Let's talk!</h2>
+        <h1 class="text-center giant">Let's talk!</h1>
         <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
       </div>
     </section>
@@ -86,7 +91,7 @@
         <p class="portfolio-tags">
           <span ng-repeat="tag in item.tags" class="tag"><span>{{tag}}</span> <span ng-show="!$last">/</span> </span>
         </p>
-        
+
         <div class="text">
           <!--<h2>{{ps.current.title}}</h2>-->
           <p ng-bind-html="item.description"></p>

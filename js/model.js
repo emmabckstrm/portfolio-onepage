@@ -30,9 +30,25 @@ portfolioApp.service('portfolioService', function() {
     }
 
     _this.portfolio = {
+      /*"id_8": {
+    		"course": "",
+    		"description": "",
+    		"shortDescription": "",
+    		"id": 8,
+    		"img": "img/2.png",
+        "imgAll": [{src: '', alt: ''}],
+    		"project": "",
+    		"role": "Web developer",
+    		"tags": ["VR", "Web development"],
+    		"team": "",
+    		"title": "Master thesis",
+    		"tools": "Unity, HTC Vive, Blender, C#",
+    		"url": "",
+        "open": false
+    	},*/
       "id_7": {
     		"course": "",
-    		"description": "The Dandelion started out as a visualization of organic food purchases in a research project at KTH, but later evolved into a versitile visualization of a full year that can be mapped to different datasets. My main responsibility during the project was to develop the web based visualization. It's built with HTML, CSS, Javascript and utilizes some aspects of the D3.js library.",
+    		"description": "The Dandelion started out as a visualization of organic food purchases in a research project at KTH, but later evolved into a versitile visualization of a full year that can be mapped to different datasets. <p>My main responsibility during the project was to develop the web based visualization. It's built with HTML, CSS, Javascript and utilizes some aspects of the D3.js library.</p>",
     		"shortDescription": "The Dandelion started out as a visualization of organic food purchases in a research project at KTH, but later evolved into a versitile visualization of a full year that can be mapped to different datasets.",
     		"id": 7,
     		"img": "img/dandelion1.png",
@@ -48,10 +64,10 @@ portfolioApp.service('portfolioService', function() {
     	},
     	"id_8": {
     		"course": "",
-    		"description": "Lorem ipsum petentium efficiantur te eum",
-    		"shortDescription": "THS Armada is the Career Fair days at KTH,",
+    		"description": "<p>Armada is the annual career fair days at KTH, engaging 250 students and invites almost 200 companies and over 10 000 visitors to the fair days.</p><p>I was part of the project team of Armada, and was team leader for four backend developers. I was responsible for the Django based AIS, which is the administrative system which the members of the Armada organization use in their work for the project.</p>",
+    		"shortDescription": "During THS Armada, the Career Fair days at KTH, I was ultimately responsible for the Django based administrative system and overseeing the work of four backend developers.",
     		"id": 8,
-    		"img": "/img/1.png",
+    		"img": "/img/armada.jpg",
         "imgAll": [],
     		"project": "",
     		"role": "Head of Internal Systems",
@@ -64,8 +80,8 @@ portfolioApp.service('portfolioService', function() {
     	},
     	"id_6": {
     		"course": "DH2321 Information Visualization",
-    		"description": "<p>Le Bon Nobel is a visualization project for a course at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.</p><p>Le Bon Nobel is a visualization project for a course at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.</p><p>Le Bon Nobel is a visualization project for a course at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.</p>",
-    		"shortDescription": "Le Bon Nobel is a information visualization project aiming to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.",
+    		"description": "<p>Le Bon Nobel is a visualization project for a course at KTH. The aim of Le Bon Nobel is to visualize Nobel prize laureates throughout history, from a geographical point of view and also give the user the oppurtunity to explore laureates down to an individual level.</p> <p>The project team consisted of a team of eight people with varying programming skills. My role was essentially fullstack, with the main responsibility of working with the data, and interactions with the circular sunburst view.</p>",
+    		"shortDescription": "Le Bon Nobel is an information visualization project aiming to visualize Nobel prize laureates throughout history.",
     		"id": 6,
     		"img": "img/lebonnobel1.png",
         "imgAll": [{src: 'img/lebonnobel1.png', alt: 'Le Bon Nobel'}, {src: 'img/lebonnobel2.jpg', alt: 'Le Bon Nobel'}],
@@ -80,8 +96,8 @@ portfolioApp.service('portfolioService', function() {
     	},
     	"id_5": {
     		"course": "",
-    		"description": "Lorem ipsum petentium efficiantur te eum",
-    		"shortDescription": "Osqledaren is the official paper of the KTH Student Union. During the the autumn and spring 2016/2017 the website was rebuilt from scratch, using the newly released Angular(2).",
+    		"description": "<p>Osqledaren is the official paper of the KTH Student Union. During the the autumn and spring 2016/2017 the website frontend was rebuilt from scratch using Angular.</p><p>As frontend developer, my responsibilities consisted of executing the concept design into code, using Angular(2), HTML, SASS, TypeScript.",
+    		"shortDescription": "Osqledaren is the official paper of the KTH Student Union. During the the autumn and spring 2016/2017 the website frontend was rebuilt from scratch using Angular.",
     		"id": 5,
     		"img": "img/ol2.jpg",
         "imgAll": [{src: 'img/ol1.jpg', alt: ''}, {src: 'img/ol2.jpg', alt: ''}, {src: 'img/ol3.jpg', alt: ''}],
@@ -91,13 +107,13 @@ portfolioApp.service('portfolioService', function() {
     		"team": "Ah Zau Marang, Simóne Stenis Perron, Tedy Warsitha, Thomas Vakili",
     		"title": "Osqledaren",
     		"tools": "Angular2, HTML, SASS, TypeScript, Git",
-    		"url": "",
+    		"url": "http://osqledaren.se/",
         "open": false
     	},
     	"id_4": {
     		"course": "DT2140 Multimodal Interaction and Interfaces",
-    		"description": "Lorem ipsum petentium efficiantur te eum",
-    		"shortDescription": "GhostHuntAR was a project for a course at KTH, consisting of an AR game app.",
+    		"description": "<p>GhostHuntAR was created within the course Multimodal Interaction and Interfaces at KTH. The core of the course was to explore different modalities to interact with technology, other than mouse and keyboard screen. GhostHuntAR was created with the aim of combining multimodality, augmented reality and playfulness.</p><p>GhostHuntAR is an augmented reality game, where the player is surrounded by ghosts and has to vanquish them to clicking them. However, in order to vanquish the ghosts, they have to be located, which is done by hearing.</p><p>My responsibilities throughout this project included 3D modelling, </p>",
+    		"shortDescription": "GhostHuntAR is a smartphone game app, combining multimodality, augmented reality and playfulness. The player has to use their hearing to locate the ghosts.",
     		"id": 4,
     		"img": "img/ghosthuntar2.jpeg",
         "imgAll": [{src: 'img/ghosthuntar2.jpeg', alt: ''}],
@@ -128,13 +144,13 @@ portfolioApp.service('portfolioService', function() {
     	},*/
     	"id_2":{
     		"course": "",
-    		"description": "During the reception of new students to Chapter of Media technology at KTH, a new website was designed and developed.",
+    		"description": "<p>The Reception of new Students to the Chapter of Media Technology at KTH is an annual, 6 months long project. The project culminates in a four week act to welcome around 70 new students. During these four weeks, one of the key means of communication with the new students is a membership based website.</p><p>For the 2015 edition of the Reception, the website was completely rebuilt. I combined the roles of web designer and frontend developer, taking full responsibility for the frontend look and functionality of the website. The tools used were Photoshop, HTML, CSS, JavaScript and PHP.",
     		"shortDescription": "During the reception of new students to Chapter of Media technology at KTH, a new website was designed and developed.",
     		"id": 2,
     		"img": "img/mtgn1.jpg",
         "imgAll": [{src: 'img/mtgn1.jpg', alt: ''}, {src: 'img/mtgn2.jpg', alt: ''}, {src: 'img/mtgn3.jpg', alt: ''}],
     		"project": "Reception for new students",
-    		"role": "UI designer & Frontend developer",
+    		"role": "Web designer & Frontend developer",
     		"tags": ["Web design", "Web development"],
     		"team": "Arvid Sätterkvist, Marcus Frisell, Viktor Ceder",
     		"title": "MTGN2015",

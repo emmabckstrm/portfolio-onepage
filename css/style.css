@@ -15,23 +15,44 @@ body {
     font-size: 0.9em;
     font-weight: 300;
 }
-
-a, a:visited {
+a, a:link, a:visited {
 	text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out; }
+	color: #b2d587;
+}
 
-a:hover {
-    -webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out; }
+a, a:link, a:visited {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-weight: 400;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	}
+a::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	margin-top: 1px;
+	background: black;
+}
+a:hover::after {
+	margin-top: 4px;
+}
+a, a:link, a:visited,
+a:hover, a::after, a:hover::after {
+  -webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out; }
 
 .text-center {
 	text-align: center;
 }
+.text-left { text-align: left; }
 .no-scroll {
 	overflow-y: hidden;
 }
@@ -61,6 +82,7 @@ h1 {
 h2 {
 	font-size: 2.5em;
 }
+
 .container {
     text-align: center;
     width: 100%;
@@ -89,6 +111,50 @@ h2 {
 .container h1 {
     margin: 0;
 }
+.hero {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87d5b5+0,b2d587+100 */
+	background: #87d5b5; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #87d5b5 0%, #b2d587 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #87d5b5 0%,#b2d587 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #87d5b5 0%,#b2d587 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87d5b5', endColorstr='#b2d587',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.hero h1 {
+	font-size: 3.5em;
+	font-weight: 600;
+	line-height: 115%;
+}
+.hero h1.giant {
+	color: white;
+	font-size: 5em;
+}
+.hero .centered {
+	border: 0px solid black;
+	max-width: 480px;
+}
+
+.hero a, .hero a:link, .hero a:visited {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-weight: 400;
+	position: relative;
+	font-size: 1em;
+	text-transform: none;
+	}
+.hero a::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	margin-top: 1px;
+	background: black;
+}
+.hero a:hover::after {
+	margin-top: 4px;
+}
 a.ico {
     margin-left: 6px;
     margin-right: 6px;
@@ -104,6 +170,19 @@ a.ico:hover {
 /*
 *		PORTFOLIO =============================
 */
+/*
+.portfolio .title {
+	display: inline-block;
+	border: 2px solid #b2d587;
+	padding: 1.5em;
+	margin: 100px auto 0;
+}
+*/
+.portfolio .title {
+	font-weight: 600;
+	margin-top: 100px;
+	margin-bottom: 0;
+}
 .portfolio-container {
 	width: 90%;
 	max-width: 800px;
@@ -274,19 +353,57 @@ a.ico:hover {
 	z-index: 2;
 }
 .contact::after {
+	background: #87d5b5; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #87d5b5 0%, #b2d587 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #87d5b5 0%,#b2d587 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #87d5b5 0%,#b2d587 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87d5b5', endColorstr='#b2d587',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 	content: '';
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: lightseagreen;
-	opacity: 0;
+	opacity: 1;
 	z-index: 1;
 }
 .contact .centered {
 	z-index: 3;
 }
+/* SLIDES
+============================================
+*/
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none; }
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+.always-relative {
+	position: relative;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2; }
+
 
 /*
 *		MEDIA QUERIES =============================

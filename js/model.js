@@ -42,7 +42,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["VR", "Web development"],
     		"team": "",
     		"title": "Master thesis",
-    		"tools": "Unity, HTC Vive, Blender, C#",
+    		"tools": ["Unity", "HTC Vive", "Blender", "C#"],
     		"url": "",
         "open": false
     	},*/
@@ -51,15 +51,15 @@ portfolioApp.service('portfolioService', function() {
     		"description": "The Dandelion started out as a visualization of organic food purchases in a research project at KTH, but later evolved into a versitile visualization of a full year that can be mapped to different datasets. <p>My main responsibility during the project was to develop the web based visualization. It's built with HTML, CSS, Javascript and utilizes some aspects of the D3.js library.</p>",
     		"shortDescription": "The Dandelion started out as a visualization of organic food purchases in a research project at KTH, but later evolved into a versitile visualization of a full year that can be mapped to different datasets.",
     		"id": 7,
-    		"img": "img/dandelion1.png",
+    		"img": "img/dandelion.jpg",
         "imgAll": [{src: '', alt: ''}],
     		"project": "",
     		"role": "Web developer",
     		"tags": ["Visualization", "Web development"],
     		"team": "Gustav Höglund, Tomás Albrecht, Victor Gustafsson",
     		"title": "The Dandelion",
-    		"tools": "HTML, CSS, JavaScript, Git, D3.js",
-    		"url": "https://emmabckstrm.github.io/spoc",
+    		"tools": ["HTML", "CSS", "JavaScript", "Git", "D3.js"],
+    		"url": "https://emmabckstrm.github.io/dandelion",
         "open": false
     	},
     	"id_8": {
@@ -74,7 +74,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Web development", "Team leader"],
     		"team": "",
     		"title": "THS Armada",
-    		"tools": "Django, Python, HMTL, CSS, Git",
+    		"tools": ["Django", "Python", "HMTL", "CSS", "Git"],
     		"url": "https://github.com/armada-ths/ais",
         "open": false
     	},
@@ -90,7 +90,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Information visualization", "Web development"],
     		"team": "Caroline Lönn, Hannes Westberg, Johanna Gustafsson, Maria Westling, Per Jaakonantti, Simóne Stenis Perron, Thomas von Prouss",
     		"title": "Le Bon Nobel",
-    		"tools": "AngularJS, HTML, CSS, JavaScript, Git",
+    		"tools": ["AngularJS", "HTML", "CSS", "JavaScript", "Git"],
     		"url": "https://lebonnobel.github.io/nobel",
         "open": false
     	},
@@ -106,13 +106,13 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Web development"],
     		"team": "Ah Zau Marang, Simóne Stenis Perron, Tedy Warsitha, Thomas Vakili",
     		"title": "Osqledaren",
-    		"tools": "Angular2, HTML, SASS, TypeScript, Git",
+    		"tools": ["Angular2", "HTML", "SASS", "TypeScript", "Git"],
     		"url": "http://osqledaren.se/",
         "open": false
     	},
     	"id_4": {
     		"course": "DT2140 Multimodal Interaction and Interfaces",
-    		"description": "<p>GhostHuntAR was created within the course Multimodal Interaction and Interfaces at KTH. The core of the course was to explore different modalities to interact with technology, other than mouse and keyboard screen. GhostHuntAR was created with the aim of combining multimodality, augmented reality and playfulness.</p><p>GhostHuntAR is an augmented reality game, where the player is surrounded by ghosts and has to vanquish them to clicking them. However, in order to vanquish the ghosts, they have to be located, which is done by hearing.</p><p>My responsibilities throughout this project included 3D modelling, </p>",
+    		"description": "<p>GhostHuntAR was created within the course Multimodal Interaction and Interfaces at KTH. The core of the course was to explore different modalities to interact with technology, other than mouse and keyboard screen. GhostHuntAR was created with the aim of combining multimodality, augmented reality and playfulness.</p><p>GhostHuntAR is an augmented reality game, where the player is surrounded by ghosts and has to vanquish them to clicking them. However, in order to vanquish the ghosts, they have to be located, which is done by hearing.</p><p>My responsibilities throughout this project included 3D modelling, game design and game development.</p>",
     		"shortDescription": "GhostHuntAR is a smartphone game app, combining multimodality, augmented reality and playfulness. The player has to use their hearing to locate the ghosts.",
     		"id": 4,
     		"img": "img/ghosthuntar2.jpeg",
@@ -122,7 +122,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Game design", "Game development", "AR"],
     		"team": "Maria Westling, Robin Kammerlander, Tedy Warsitha",
     		"title": "GhostHuntAR",
-    		"tools": "Unity, C#, Blender, Vuforia",
+    		"tools": ["Unity", "C#", "Blender", "Vuforia"],
     		"url": "",
         "open": false
     	},
@@ -154,7 +154,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Web design", "Web development"],
     		"team": "Arvid Sätterkvist, Marcus Frisell, Viktor Ceder",
     		"title": "MTGN2015",
-    		"tools": "HTML, CSS, PHP, JavaScript, Git",
+    		"tools": ["HTML", "CSS", "PHP", "JavaScript", "Git"],
     		"url": "",
         "open": false
     	}/*,

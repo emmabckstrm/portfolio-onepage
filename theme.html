@@ -43,7 +43,7 @@
                ng-class="{ 'showing': $index == selectedIndex, 'always-relative': $index == 0 }"
                ng-click="itemClicked($index)"> {{ item }} </h1>
              </div>
-            <p>In spring 2018 I will graduate from KTH as Media Technology Engineer, with a focus in human-computer interaction. I want to create things that matter with awesome people.</p>
+            <p>In spring 2018 I will graduate from KTH as an Media Technology Engineer, with a focus in human-computer interaction. I want to create things that matter with awesome people.</p>
             <!--<p>
                 <a class="ico" href="https://www.linkedin.com/in/emmabackstrom/"><i class="fa fa-linkedin fa-lg"></i></a>
                 <a class="ico" href="https://github.com/emmabckstrm/"><i class="fa fa-github-alt fa-lg"></i> </a>
@@ -81,7 +81,7 @@
     -->
     <div ng-repeat="(key, item) in ps.portfolio" ng-class="key == currentId ? 'popup-open' : 'popup-close'" class="container portfolio-popup">
       <nav class="nav-popup">
-        <h2 ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> {{ps.current.title}}</h2>
+        <h2 ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> Back</h2>
       </nav>
       <div class="centered popup-container">
         <div class="img">
@@ -96,7 +96,9 @@
           <!--<h2>{{ps.current.title}}</h2>-->
           <p ng-bind-html="item.description"></p>
           <p ng-if="ps.current.url" class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
-          <span ng-click="closePopup(key)">CLOSE</span>
+          <p class="text-center portfolio-tools">
+            <span ng-repeat="tool in item.tools" class="tool">{{tool}} </span>
+          </p>
         </div>
 
 

@@ -27,7 +27,6 @@ a, a:link, a:visited {
 	font-weight: 400;
 	position: relative;
 	text-transform: uppercase;
-	font-size: 0.8em;
 	}
 a::after {
 	content: '';
@@ -240,6 +239,16 @@ a.ico:hover {
 }
 .portfolio-tags .tag span {
 	margin-right: 4px;
+}
+.portfolio-tools {
+	/*color: #b2d587;*/
+	padding-top: 10px;
+}
+.portfolio-tools span {
+	background: #b2d587;
+	color: white;
+	padding: 4px 8px;
+	margin: 0 4px;
 }
 /*
 *		portfolio popu8p

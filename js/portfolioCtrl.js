@@ -18,7 +18,7 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
   	slides[currentSlide].className = 'slide showing';
   }*/
 
-  $scope.collection = ["Web developer", "Plant lover", "Problem solver", "Interaction designer", "Dreamer"];
+  $scope.collection = ["Web developer", "Plant lover", "Problem solver", "Dreamer"];
 
   $scope.selectedIndex = 0; // Whatever the default selected index is, use -1 for no selection
 
@@ -27,15 +27,17 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
     $scope.selectedIndex = $index;
   };
 
-  /*$interval(function() {
+  $interval(function() {
     if ($scope.selectedIndex < $scope.collection.length-1) {
       $scope.selectedIndex = $scope.selectedIndex + 1;
     } else {
       $scope.selectedIndex = 0;
     }
 
-  }, 2500);*/
+  }, 2500);
 
+  $scope.aboutMe = "I dream of working with a tight, cross competent team where people care about the world and want to create things that matter. In spring 2018 I will graduate from KTH as an Media Technology Engineer, with a focus in human-computer interaction and will be available for hire in fall.";
+  $scope.aboutMeShort = " I dream of working with a tight, cross competent team where people care about the world and want to create things that matter. I am available for hire fall 2018."
 
   $scope.testFunc = function(t) {
     $scope.ps.currentTitle = t;

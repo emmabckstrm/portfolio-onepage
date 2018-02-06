@@ -58,6 +58,11 @@ a:hover, a::after, a:hover::after {
 .scroll {
 	overflow-y: auto;
 }
+.img-circle {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
 
 /*
 *   HEADER =======================================
@@ -81,7 +86,12 @@ h1 {
 h2 {
 	font-size: 2.5em;
 }
-
+.show-on-mobile {
+	display: none;
+}
+.flex {
+	display: flex;
+}
 .container {
     text-align: center;
     width: 100%;
@@ -100,7 +110,7 @@ h2 {
 .centered {
   display: inline-block;
   vertical-align: middle;
-  max-width: 380px;
+  max-width: 550px;
   width: 92%;
 	position: relative;
 }
@@ -110,7 +120,7 @@ h2 {
 .container h1 {
     margin: 0;
 }
-.hero {
+.gradient-bg {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87d5b5+0,b2d587+100 */
 	background: #87d5b5; /* Old browsers */
 	background: -moz-linear-gradient(45deg, #87d5b5 0%, #b2d587 100%); /* FF3.6-15 */
@@ -125,11 +135,11 @@ h2 {
 }
 .hero h1.giant {
 	color: white;
-	font-size: 5em;
+	font-size: 6em;
 }
 .hero .centered {
 	border: 0px solid black;
-	max-width: 480px;
+	max-width: 600px;
 }
 
 .hero a, .hero a:link, .hero a:visited {
@@ -167,6 +177,30 @@ a.ico:hover {
 /* -----------------------------------------------*/
 
 /*
+*		ABOUT =============================
+*/
+.container.about {
+	height: auto;
+	padding: 100px 0;
+}
+section.about .centered {
+	max-width: 630px;
+}
+.img-about {
+	width: 90%;
+	max-width: 350px;
+}
+.about-title {
+	font-weight: 600;
+	font-size: 3.5em;
+	color: #A0D5A1;
+	margin: 0;
+}
+.about .col-info {
+	padding-left: 20px;
+}
+
+/*
 *		PORTFOLIO =============================
 */
 /*
@@ -181,6 +215,9 @@ a.ico:hover {
 	font-weight: 600;
 	margin-top: 100px;
 	margin-bottom: 0;
+	display: inline-block;
+	color: #A0D5A1;
+	padding: 10px 25px;
 }
 .portfolio-container {
 	width: 90%;
@@ -205,9 +242,9 @@ a.ico:hover {
 	width: 50%;
 	position: relative;
 }
-.portfolio-item .col-img {
+.col-img {
 }
-.portfolio-item .col-info {
+.col-info {
 	align-self: center;
 	text-align: justify;
 }
@@ -245,8 +282,8 @@ a.ico:hover {
 	padding-top: 10px;
 }
 .portfolio-tools span {
-	background: #b2d587;
-	color: white;
+	background: #A0D5A1;
+	color: black;
 	padding: 4px 8px;
 	margin: 0 4px;
 }
@@ -420,6 +457,19 @@ these make the slideshow work
 
 
 @media (max-width: 600px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	.show-on-mobile {
+		display: block;
+	}
+	h1 {
+		font-size: 9vw;
+	}
+	h1.giant {
+		font-size: 14vw;
+	}
+
 	.portfolio-item:nth-child(even) .col-img {
 		left: 0%;
 	}
@@ -430,10 +480,13 @@ these make the slideshow work
 	.portfolio-item:nth-child(odd) .col-info {
 		padding-left: 0;
 	}
-	.portfolio-item {
+	.portfolio-item, .flex {
 		flex-wrap: wrap;
 	}
 	.portfolio-col {
 		width: 100%;
+	}
+	.about-title {
+		margin-top: 0.7em;
 	}
 }

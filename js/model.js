@@ -39,7 +39,7 @@ portfolioApp.service('portfolioService', function() {
         "imgAll": [{src: '', alt: ''}],
     		"project": "",
     		"role": "Web developer",
-    		"tags": ["VR", "Web development"],
+    		"tags": ["Master thesis", "VR", "Web development"],
     		"team": "",
     		"title": "Master thesis",
     		"tools": ["Unity", "HTC Vive", "Blender", "C#"],
@@ -74,7 +74,7 @@ portfolioApp.service('portfolioService', function() {
     		"tags": ["Web development", "Team leader"],
     		"team": "",
     		"title": "THS Armada",
-    		"tools": ["Django", "Python", "HMTL", "CSS", "Git"],
+    		"tools": ["Django", "Python", "HTML", "CSS", "Git"],
     		"url": "https://github.com/armada-ths/ais",
         "open": false
     	},

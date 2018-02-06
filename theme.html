@@ -34,7 +34,7 @@
 
 
 <body ng-class="openPopup ? 'no-scroll' : 'scroll'" ng-controller="portfolioController">
-  <header class="hero container">
+  <header class="gradient-bg hero container">
         <div class="centered">
             <!--<img class="portrait" src="{PortraitURL-128}"/>-->
             <h1 class="text-left">Hi,</br> I'm Emma. I am a</h1>
@@ -43,7 +43,7 @@
                ng-class="{ 'showing': $index == selectedIndex, 'always-relative': $index == 0 }"
                ng-click="itemClicked($index)"> {{ item }} </h1>
              </div>
-            <p>In spring 2018 I will graduate from KTH as an Media Technology Engineer, with a focus in human-computer interaction. I want to create things that matter with awesome people.</p>
+            <p class="hide-on-mobile" ng-bind-html="aboutMeShort"></p>
             <!--<p>
                 <a class="ico" href="https://www.linkedin.com/in/emmabackstrom/"><i class="fa fa-linkedin fa-lg"></i></a>
                 <a class="ico" href="https://github.com/emmabckstrm/"><i class="fa fa-github-alt fa-lg"></i> </a>
@@ -53,7 +53,7 @@
         </div>
   </header>
   <section class="text-center portfolio">
-    <h1 class="text-center title">Some of my work</h1>
+    <h1 class="text-center title ">Some of my work</h1>
     <ul class="list-unstyled portfolio-container">
       <li ng-repeat="item in ps.portfolio" ng-click="updatePreview(item.id)" class="portfolio-item">
         <div class="portfolio-col col-img">
@@ -69,12 +69,25 @@
       </li>
     </ul> <!-- end portfolio container -->
   </section>
-    <section class="container hero">
-      <div class="centered">
-        <h1 class="text-center giant">Let's talk!</h1>
-        <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
+  <section class="container about">
+    <div class="centered">
+      <div class="flex">
+        <div class="portfolio-col col-img">
+          <img class="img-circle img-about" src="https://static.tumblr.com/ta26uqw/kphp3qzz3/emma3.png"/>
+        </div>
+        <div class="portfolio-col col-info">
+          <h2 class="about-title">Who am I?</h2>
+          <p ng-bind-html="aboutMe"></p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <section class="container gradient-bg hero">
+    <div class="centered">
+      <h1 class="text-center giant">Let's talk!</h1>
+      <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
+    </div>
+  </section>
 
     <!--
       ******************************* POPUP

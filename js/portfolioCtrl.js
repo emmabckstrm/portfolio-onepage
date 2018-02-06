@@ -18,7 +18,7 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
   	slides[currentSlide].className = 'slide showing';
   }*/
 
-  $scope.collection = ["Web developer", "Plant lover"];
+  $scope.collection = ["Web developer", "Plant lover", "Problem solver", "Interaction designer", "Dreamer"];
 
   $scope.selectedIndex = 0; // Whatever the default selected index is, use -1 for no selection
 

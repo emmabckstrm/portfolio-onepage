@@ -62,7 +62,7 @@
         <div class="portfolio-col col-info">
           <h3>{{item.title}}</h3>
           <p class="portfolio-tags">
-            <span ng-repeat="tag in item.tags" class="tag"><span>{{tag}}</span> <span ng-show="!$last">/</span> </span>
+            <span ng-repeat="tag in item.tags" class="tag"><span ng-bind-html="tag"></span> <span ng-show="!$last">/</span> </span>
           </p>
           <p>{{item.shortDescription}}</p>
         </div>
@@ -89,7 +89,7 @@
         </div>
         <h3>{{item.title}}</h3>
         <p class="portfolio-tags">
-          <span ng-repeat="tag in item.tags" class="tag"><span>{{tag}}</span> <span ng-show="!$last">/</span> </span>
+          <span ng-repeat="tag in item.tags" class="tag"><span ng-bind-html="tag"></span> <span ng-show="!$last">/</span> </span>
         </p>
 
         <div class="text">
@@ -97,7 +97,7 @@
           <p ng-bind-html="item.description"></p>
           <p ng-if="ps.current.url" class="text-center"><a target="_blank" href="{{ps.current.url}}">View project</a></p>
           <p class="text-center portfolio-tools">
-            <span ng-repeat="tool in item.tools" class="tool">{{tool}} </span>
+            <span ng-repeat="tool in item.tools" class="tool" ng-bind-html="tool"></span>
           </p>
         </div>
 

@@ -1,10 +1,16 @@
 // Define the `PhoneListController` controller on the `phonecatApp` module
-portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfolioService', function PortfolioController($scope, $interval, portfolioService) {
+portfolioApp.controller('portfolioController', ['$scope', '$timeout', '$interval', 'portfolioService', function PortfolioController($scope, $timeout, $interval, portfolioService) {
 
   $scope.currentId = '';
   $scope.ps = portfolioService;
   $scope.number = $scope.ps.number;
   $scope.openPopup = false;
+  $scope.loading = true;
+
+
+
+  $timeout(function(){$scope.loading = false}, 1000);
+
 
   /*  SLIDER TRANSITIONS ==========================
   *
@@ -23,7 +29,6 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
   $scope.selectedIndex = 0; // Whatever the default selected index is, use -1 for no selection
 
   $scope.itemClicked = function ($index) {
-    console.log($index);
     $scope.selectedIndex = $index;
   };
 
@@ -41,13 +46,11 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
 
   $scope.testFunc = function(t) {
     $scope.ps.currentTitle = t;
-    console.log(t, $scope.ps.portfolio.id_6.title);
   }
 
   $scope.updatePreview = function(id) {
     $scope.currentId = "id_";
     $scope.currentId  += String(id);
-    console.log("hello2", $scope.currentId);
     $scope.openPopup = true;
     $scope.ps.updatePreview($scope.currentId);
   }
@@ -61,6 +64,7 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
   $scope.updateNumber = function() {
     $scope.ps.updateNumber();
   }
+
 
 
 }]);

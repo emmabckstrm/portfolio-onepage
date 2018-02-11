@@ -34,6 +34,11 @@
 
 
 <body ng-class="openPopup ? 'no-scroll' : 'scroll'" ng-controller="portfolioController">
+  <div class="loader-overlay container gradient-bg" ng-class="{ 'showing': loading == true, 'hidden': loading == false }">
+    <div class="centered">
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+  </div>
   <header class="gradient-bg hero container">
         <div class="centered">
             <!--<img class="portrait" src="{PortraitURL-128}"/>-->

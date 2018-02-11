@@ -1,4 +1,10 @@
-body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+body, html {
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+}
 
 *,
 *:after,
@@ -14,6 +20,7 @@ body {
     color: #000;
     font-size: 0.9em;
     font-weight: 300;
+
 }
 a, a:link, a:visited {
 	text-decoration: none;
@@ -91,6 +98,9 @@ h2 {
 }
 .flex {
 	display: flex;
+}
+.cursor-pointer {
+	cursor: pointer;
 }
 .container {
     text-align: center;
@@ -174,20 +184,25 @@ a.ico, a.ico:link, a.ico:visited {
 a.ico:hover {
     color: seagreen;
 }
+
 /* -----------------------------------------------*/
 
 /*
 *		ABOUT =============================
 */
-.container.about {
+section.about {
+	position: relative;
+	background: white;
+}
+.container.aboutt {
 	height: auto;
 	padding: 100px 0;
 }
 section.about .centered {
-	max-width: 630px;
+	max-width: 800px;
 }
 .img-about {
-	width: 90%;
+	width: 80%;
 	max-width: 350px;
 }
 .about-title {
@@ -198,6 +213,14 @@ section.about .centered {
 }
 .about .col-info {
 	padding-left: 20px;
+}
+.img-profile {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+}
+.img-profile img {
+	display: block;
 }
 
 /*
@@ -266,6 +289,7 @@ section.about .centered {
 	text-transform: uppercase;
 	font-size: 2em;
 	margin-bottom: 0;
+	color: #A0D5A1;
 }
 .portfolio-tags {
 	padding-top: 0;
@@ -466,8 +490,14 @@ these make the slideshow work
 	h1 {
 		font-size: 9vw;
 	}
+	.hero h1.giant,
 	h1.giant {
-		font-size: 14vw;
+		font-size: 21vw;
+	}
+
+	.about-title {
+		margin-top: 0.7em;
+		font-size: 11vw;
 	}
 
 	.portfolio-item:nth-child(even) .col-img {
@@ -486,7 +516,5 @@ these make the slideshow work
 	.portfolio-col {
 		width: 100%;
 	}
-	.about-title {
-		margin-top: 0.7em;
-	}
+
 }

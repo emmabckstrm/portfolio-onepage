@@ -43,7 +43,7 @@
                ng-class="{ 'showing': $index == selectedIndex, 'always-relative': $index == 0 }"
                ng-click="itemClicked($index)"> {{ item }} </h1>
              </div>
-            <p class="hide-on-mobile" ng-bind-html="aboutMeShort"></p>
+            <!--<p class="hide-on-mobile" ng-bind-html="aboutMeShort"></p>-->
             <!--<p>
                 <a class="ico" href="https://www.linkedin.com/in/emmabackstrom/"><i class="fa fa-linkedin fa-lg"></i></a>
                 <a class="ico" href="https://github.com/emmabckstrm/"><i class="fa fa-github-alt fa-lg"></i> </a>
@@ -52,6 +52,23 @@
 
         </div>
   </header>
+  <section class="container hero about">
+    <div class="centered">
+      <div class="flex">
+        <div class="portfolio-col col-img show-on-mobile">
+          <img class="img-circle img-about" src="https://static.tumblr.com/ta26uqw/kphp3qzz3/emma3.png"/>
+        </div>
+        <div class="portfolio-col col-info">
+          <h2 class="about-title">Nice to meet you!</h2>
+          <p ng-bind-html="aboutMe"></p>
+        </div>
+
+      </div>
+    </div>
+    <div class="img-profile hide-on-mobile">
+      <img src="img/emma-transparent.png"/>
+    </div>
+  </section>
   <section class="text-center portfolio">
     <h1 class="text-center title ">Some of my work</h1>
     <ul class="list-unstyled portfolio-container">
@@ -69,23 +86,10 @@
       </li>
     </ul> <!-- end portfolio container -->
   </section>
-  <section class="container about">
-    <div class="centered">
-      <div class="flex">
-        <div class="portfolio-col col-img">
-          <img class="img-circle img-about" src="https://static.tumblr.com/ta26uqw/kphp3qzz3/emma3.png"/>
-        </div>
-        <div class="portfolio-col col-info">
-          <h2 class="about-title">Who am I?</h2>
-          <p ng-bind-html="aboutMe"></p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="container gradient-bg hero">
     <div class="centered">
       <h1 class="text-center giant">Let's talk!</h1>
-      <p>You can find me on <a class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
+      <p>You can find me on <a target="_blank" class="" href="https://www.linkedin.com/in/emmabackstrom/">Linkedin</a>, <a target="_blank" href="https://github.com/emmabckstrm">Github</a> or send me an <a class="" href="mailto:backstromemma@gmail.com">email</a>.</p>
     </div>
   </section>
 
@@ -94,7 +98,7 @@
     -->
     <div ng-repeat="(key, item) in ps.portfolio" ng-class="key == currentId ? 'popup-open' : 'popup-close'" class="container portfolio-popup">
       <nav class="nav-popup">
-        <h2 ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> Back</h2>
+        <h2 class="cursor-pointer" ng-click="closePopup(key)"><i class="fa fa-angle-left fa-lg icon-back" aria-hidden="true"></i> Back</h2>
       </nav>
       <div class="centered popup-container">
         <div class="img">

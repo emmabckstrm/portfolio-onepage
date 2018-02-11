@@ -36,7 +36,7 @@ portfolioApp.controller('portfolioController', ['$scope', '$interval', 'portfoli
 
   }, 2500);
 
-  $scope.aboutMe = "I dream of working with a tight, cross competent team where people care about the world and want to create things that matter. In spring 2018 I will graduate from KTH as an Media Technology Engineer, with a focus in human-computer interaction and will be available for hire in fall.";
+  $scope.aboutMe = "<p>I am a <b>problem solver</b> at heart with a wide set of skills. Usually I solve problems through code, my strongest skill being front end, but I am also equipped with knowledge about object oriented programming. On top of that I am passionate about the design process and solving problems from a user perspective.</p><p>I am a restless soul, driven by learning new things, personal development and making the world a better place.</p><p>During spring 2018 I will graduate from KTH with a degree in Media Technology Engineering.</p>";
   $scope.aboutMeShort = " I dream of working with a tight, cross competent team where people care about the world and want to create things that matter. I am available for hire fall 2018."
 
   $scope.testFunc = function(t) {
